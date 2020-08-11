@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.github.submission2.R
-import com.dicoding.github.submission2.model.DataFollowers
 import com.dicoding.github.submission2.model.DataFollowing
 import kotlinx.android.synthetic.main.item_user.view.*
 
@@ -21,21 +20,21 @@ class ListDataFollowingAdapter(private val listDataFollowing: ArrayList<DataFoll
     }
 
     inner class ListDataHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
-        fun bind(dataFollowers: DataFollowing) {
+        fun bind(dataFollowing: DataFollowing) {
             with(itemView) {
                 Glide.with(itemView.context)
-                    .load(dataFollowers.avatar)
+                    .load(dataFollowing.avatar)
                     .apply(RequestOptions().override(100, 100))
                     .into(avatar)
 
-                fullName.text = dataFollowers.name
-                userName.text = dataFollowers.username
+                fullName.text = dataFollowing.name
+                userName.text = dataFollowing.username
                 count_following.text =
-                    itemView.context.getString(R.string.following, dataFollowers.following)
+                    itemView.context.getString(R.string.following, dataFollowing.following)
                 count_followers.text =
-                    itemView.context.getString(R.string.followers, dataFollowers.followers)
+                    itemView.context.getString(R.string.followers, dataFollowing.followers)
                 count_repos.text =
-                    itemView.context.getString(R.string.repositories, dataFollowers.repository)
+                    itemView.context.getString(R.string.repositories, dataFollowing.repository)
 
             }
         }

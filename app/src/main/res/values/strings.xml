@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Github Users</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">About</string>
     <string name="search">Search</string>
     <string name="yandiio">\@%s</string>
@@ -9,6 +8,14 @@
     <string name="fullName">Name</string>
     <string name="following">%s Followings</string>
     <string name="followers">%s Followers</string>
-    <string name="hint">Search Here</string>
+    <string name="work_in">Work in</string>
+    <string name="location">Location</string>
+    <string name="kosong">NULL</string>
+    <string name="separator">Separator</string>
+    <string name="count">Count</string>
     <string name="change_language">Change Language</string>
+    <string name="repos">Repositories</string>
+    <string name="folloowing">following</string>
+    <string name="folloower">Followers</string>
+    <string name="creator">Created By Muhammad Yandi F</string>
 </resources>

@@ -3,7 +3,6 @@
     <color name="colorPrimaryDark">#0f4c75</color>
     <color name="colorPrimary">#3282b8</color>
     <color name="colorAccent">#bbe1fa</color>
-    <color name="colorUiOne">#4ea0ae</color>
     <color name="colorUiTwo">#7fdbda</color>
     <color name="cardBackGround">#eeeeee</color>
 </resources>

@@ -3,10 +3,8 @@ package com.dicoding.github.submission2.ui.following
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.github.submission2.model.DataFollowers
 import com.dicoding.github.submission2.model.DataFollowing
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -15,11 +13,11 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 class FollowingViewModel : ViewModel() {
-    private val listFollowerNonMutable = ArrayList<DataFollowers>()
-    private val listFollowerMutable = MutableLiveData<ArrayList<DataFollowers>>()
+    private val listFollowingNonMutable = ArrayList<DataFollowing>()
+    private val listFollowingMutable = MutableLiveData<ArrayList<DataFollowing>>()
 
-    fun getListFollower(): LiveData<ArrayList<DataFollowers>> {
-        return listFollowerMutable
+    fun getListFollowing(): MutableLiveData<ArrayList<DataFollowing>> {
+        return listFollowingMutable
     }
 
     fun getDataGit(context: Context, id: String) {
@@ -93,6 +91,8 @@ class FollowingViewModel : ViewModel() {
                     usersData.company = jsonObj.getString("company")
                     usersData.followers = jsonObj.getString("followers")
                     usersData.following = jsonObj.getString("following")
+                    listFollowingNonMutable.add(usersData)
+                    listFollowingMutable.postValue(listFollowingNonMutable)
                 } catch (e: Exception) {
                     Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
                     e.printStackTrace()

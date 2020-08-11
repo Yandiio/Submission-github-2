@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Github Users</string>
+    <string name="about">Tentang</string>
+    <string name="search">cari</string>
+    <string name="yandiio">\@%s</string>
+    <string name="repositories">%s Repositori</string>
+    <string name="fullName">Name</string>
+    <string name="following">%s Mengikuti</string>
+    <string name="followers">%s Pengikut</string>
+
+
+    <string name="work_in">Work in</string>
+    <string name="location">Location</string>
+    <string name="kosong">NULL</string>
+    <string name="separator">Separator</string>
+    <string name="count">Count</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="repos">Repositori</string>
+    <string name="folloowing">Mengikuti</string>
+    <string name="folloower">Pengikut</string>
+    <string name="creator">Dibuat oleh Muhammad Yandi F</string>
 
 </resources>

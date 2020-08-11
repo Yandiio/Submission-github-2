@@ -17,8 +17,8 @@ class ViewPagerDetailAdapter(private val mContext: Context, fm: FragmentManager)
     )
 
     private val tabTitles = intArrayOf(
-        R.string.following,
-        R.string.followers
+        R.string.folloowing,
+        R.string.folloower
     )
 
     override fun getItem(position: Int): Fragment {
